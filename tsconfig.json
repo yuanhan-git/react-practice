@@ -1,0 +1,22 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+     /*
+    TypeScript 官方文档明确建议将全局类型声明放在项目根目录的 types/ 或 typings/ 目录下，
+    并通过 tsconfig.json 的 typeRoots 配置指向该目录：
+    */
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/assets/*": ["src/assets/*"]
+    }
+  }
+}
